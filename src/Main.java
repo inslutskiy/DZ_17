@@ -9,11 +9,9 @@ public class Main {
         people.add(new Person("Ира", "Зайцев", 22));
         people.add(new Person("Ксения", "Львова-Носкова-Нам", 15));
 
-        for (int i = 0; i < people.size(); i++) {
-            System.out.println(people.get(i));
+        for (Person person : people) {
+            System.out.println(person);
         }
-
-
 
         Comparator<Person> comparator = (Person o1 , Person o2) -> {
             if (o1.surnameLength > o2.surnameLength) {
@@ -25,11 +23,11 @@ public class Main {
             }
         };
 
-        Collections.sort(people, comparator);
+        people.sort(comparator);
 
         System.out.println("==========================");
-        for (int i = 0; i < people.size(); i++) {
-            System.out.println(people.get(i));
+        for (Person person : people) {
+            System.out.println(person);
         }
     }
 
