@@ -2,15 +2,14 @@ public class Person implements Comparable<Person>{
     private String name;
     private String surname;
     private int age;
-    private String[] surnamel;
     private int surnameLength;
 
     public Person(String name, String surname, int age){
         this.name = name;
         this.surname = surname;
         this.age = age;
-        this.surnamel = surname.split("-");
-        this.surnameLength = surnamel.length;
+        String[] surname_Length = surname.split("-");
+        this.surnameLength = surname_Length.length;
     }
 
     public String getName() {

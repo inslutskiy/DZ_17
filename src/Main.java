@@ -9,14 +9,15 @@ public class Main {
         map.add(new Person("Ира", "Зайцев", 22));
         map.add(new Person("Ксения", "Львова-Носкова-Нам", 15));
 
-        for (int i = 0; i < map.size(); i++) {
-            System.out.println(map.get(i));
+        for (Person person : map) {
+            System.out.println(person);
         }
 
         Collections.sort(map);
+
         System.out.println("==========================");
-        for (int i = 0; i < map.size(); i++) {
-            System.out.println(map.get(i));
+        for (Person person : map) {
+            System.out.println(person);
         }
     }
 }
